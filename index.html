@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Music Player</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            🎵 <span>MY MUSIC</span>
+        </div>
+
+        <nav>
+            <a class="active">🏠 Home</a>
+            <a>❤️ Liked Songs</a>
+            <a>📁 Your Playlist</a>
+        </nav>
+
+        <div class="side-now-playing">
+
+            <p>NOW PLAYING</p>
+
+            <div class="small-cover">
+                🎵
+            </div>
+
+            <h3 id="sideTitle">Song Title</h3>
+            <p id="sideArtist">Artist</p>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <!-- TOP BAR -->
+        <header>
+
+            <div>
+                <p class="welcome">GOOD EVENING</p>
+                <h1>Music Player</h1>
+            </div>
+
+            <div class="profile">
+                👤
+            </div>
+
+        </header>
+
+
+        <!-- HERO PLAYER -->
+        <section class="player-section">
+
+            <div class="album-area">
+
+                <div class="album-cover" id="albumCover">
+
+                    <div class="cover-content">
+                        <span>🎵</span>
+                        <h2>MY MUSIC</h2>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="song-details">
+
+                <p class="now-playing-text">
+                    NOW PLAYING
+                </p>
+
+                <h2 id="songTitle">
+                    Song Title
+                </h2>
+
+                <p id="songArtist">
+                    Artist
+                </p>
+
+
+                <!-- PROGRESS -->
+                <div class="progress-container">
+
+                    <span id="currentTime">
+                        0:00
+                    </span>
+
+                    <input
+                        type="range"
+                        id="progress"
+                        value="0"
+                        min="0"
+                        max="100"
+                    >
+
+                    <span id="duration">
+                        0:00
+                    </span>
+
+                </div>
+
+
+                <!-- CONTROLS -->
+                <div class="controls">
+
+                    <button id="prevBtn" class="control">
+                        ⏮
+                    </button>
+
+                    <button id="playBtn" class="play-button">
+                        ▶
+                    </button>
+
+                    <button id="nextBtn" class="control">
+                        ⏭
+                    </button>
+
+                </div>
+
+
+                <!-- VOLUME -->
+                <div class="volume">
+
+                    <span>🔊</span>
+
+                    <input
+                        type="range"
+                        id="volume"
+                        min="0"
+                        max="1"
+                        step="0.01"
+                        value="0.8"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PLAYLIST -->
+        <section class="playlist-section">
+
+            <div class="section-title">
+
+                <h2>Your Songs</h2>
+
+                <span id="songCount">
+                    5 Songs
+                </span>
+
+            </div>
+
+            <div id="playlist" class="playlist"></div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- AUDIO -->
+<audio id="audio"></audio>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
